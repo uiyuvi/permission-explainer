@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" role="img" aria-label="Raw permission prompt before permission-explainer">
+  <rect width="640" height="180" rx="12" fill="#16181d"/>
+  <rect x="16" y="16" width="608" height="148" rx="8" fill="#1f232b" stroke="#3a3f4a"/>
+  <text x="36" y="52" font-family="monospace" font-size="15" fill="#9aa0aa">agent asks permission (before):</text>
+  <text x="36" y="82" font-family="monospace" font-size="15" fill="#e6e6e6">Run `grep -r "price" .` ?</text>
+  <text x="36" y="110" font-family="monospace" font-size="14" fill="#9aa0aa">[ Allow once ]  [ Always ]  [ Reject ]</text>
+  <text x="36" y="138" font-family="monospace" font-size="12" fill="#6b7280">No context. Jargon. Blind choice. (synthetic mock)</text>
+</svg>

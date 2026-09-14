@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" role="img" aria-label="Auto-approved past-tense explainer">
+  <rect width="640" height="200" rx="12" fill="#16181d"/>
+  <rect x="16" y="16" width="608" height="168" rx="8" fill="#23262e" stroke="#5b6b8c"/>
+  <text x="36" y="56" font-family="monospace" font-size="14" fill="#e6e6e6">Did (auto-approved): searched files — found 3 matches,</text>
+  <text x="36" y="82" font-family="monospace" font-size="14" fill="#e6e6e6">changed nothing.</text>
+  <text x="36" y="112" font-family="monospace" font-size="12" fill="#9aa0aa">Auto-path prints past-tense after the fact, so</text>
+  <text x="36" y="132" font-family="monospace" font-size="12" fill="#9aa0aa">silent approvals stay visible. (synthetic mock)</text>
+  <text x="36" y="158" font-family="monospace" font-size="12" fill="#6b7280">1-line minimal form: `Did: search files — 3 matches, no changes.`</text>
+</svg>
