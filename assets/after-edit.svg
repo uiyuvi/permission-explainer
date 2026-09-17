@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="280" role="img" aria-label="Permission explainer for destructive delete">
   <rect width="640" height="280" rx="12" fill="#16181d"/>
   <rect x="16" y="16" width="608" height="248" rx="8" fill="#2b1f1f" stroke="#a33b3b"/>
-  <text x="36" y="52" font-family="monospace" font-size="14" fill="#e6e6e6">Tool wants to: delete the dist/ folder</text>
-  <text x="36" y="78" font-family="monospace" font-size="14" fill="#e6e6e6">What it will do: permanently remove 40 files. Can&apos;t undo.</text>
-  <text x="36" y="104" font-family="monospace" font-size="14" fill="#e6e6e6">Why now: you asked to clean the build output.</text>
-  <text x="36" y="130" font-family="monospace" font-size="14" fill="#ffb4b4">Why needs OK: deleting can&apos;t be undone. Suggest Reject if unsure.</text>
+  <text x="36" y="52" font-family="monospace" font-size="14" fill="#e6e6e6">Tool call incoming</text>
+  <text x="36" y="78" font-family="monospace" font-size="14" fill="#e6e6e6">What: delete the dist/ folder — 40 files.</text>
+  <text x="36" y="104" font-family="monospace" font-size="14" fill="#e6e6e6">Why: you asked to clean the build output.</text>
+  <text x="36" y="130" font-family="monospace" font-size="14" fill="#ffb4b4">Changes: 40 files gone. Reversible: No. Suggest Reject if unsure.</text>
   <text x="36" y="156" font-family="monospace" font-size="14" fill="#ffd479">Pick: Once / Always / Reject / Explain more</text>
   <text x="36" y="186" font-family="monospace" font-size="12" fill="#6b7280">Destructive case — where the explainer matters most.</text>
   <text x="36" y="208" font-family="monospace" font-size="12" fill="#6b7280">Never pick Always for deletes. (synthetic mock)</text>

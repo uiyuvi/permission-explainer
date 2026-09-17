@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" role="img" aria-label="Permission explainer for file search">
   <rect width="640" height="260" rx="12" fill="#16181d"/>
   <rect x="16" y="16" width="608" height="228" rx="8" fill="#1c2b1f" stroke="#3d7a44"/>
-  <text x="36" y="52" font-family="monospace" font-size="14" fill="#e6e6e6">Tool wants to: search files</text>
-  <text x="36" y="78" font-family="monospace" font-size="14" fill="#e6e6e6">What it will do: look through files for text. Nothing changes.</text>
-  <text x="36" y="104" font-family="monospace" font-size="14" fill="#e6e6e6">Why now: you asked where the price is used.</text>
-  <text x="36" y="130" font-family="monospace" font-size="14" fill="#e6e6e6">Why needs OK: it reads your files.</text>
+  <text x="36" y="52" font-family="monospace" font-size="14" fill="#e6e6e6">Tool call incoming</text>
+  <text x="36" y="78" font-family="monospace" font-size="14" fill="#e6e6e6">What: look through files for text. Nothing changes.</text>
+  <text x="36" y="104" font-family="monospace" font-size="14" fill="#e6e6e6">Why: you asked where the price is used.</text>
+  <text x="36" y="130" font-family="monospace" font-size="14" fill="#e6e6e6">Changes: None. Reversible: Yes.</text>
   <text x="36" y="156" font-family="monospace" font-size="14" fill="#ffd479">Pick: Once / Always / Reject / Explain more</text>
   <text x="36" y="186" font-family="monospace" font-size="12" fill="#6b7280">Safe case. Reading only. (synthetic mock)</text>
   <text x="36" y="208" font-family="monospace" font-size="12" fill="#6b7280">Explained does not mean safe — when in doubt, Reject.</text>
