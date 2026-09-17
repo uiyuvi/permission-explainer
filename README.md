@@ -9,11 +9,12 @@ Works with Claude Code, Codex, Cursor, Antigravity, opencode, Gemini CLI, Bob.
 ## Install
 
 ```bash
-# GitHub CLI (needs v2.90.0+): installs to the right folder for your host
-gh skill install uiyuvi/permission-explainer permission-explainer
-
-# skills.sh (Vercel): pick your agent
+# skills.sh (Vercel): pick your agent — recommended
 npx skills add uiyuvi/permission-explainer --skill permission-explainer --agent opencode
+
+# GitHub CLI: only if you have the skills extension installed
+# (plain gh has no "skill" subcommand — you'd get "unknown command")
+gh skill install uiyuvi/permission-explainer permission-explainer
 ```
 
 Manual install — copy the `skills/permission-explainer/` folder to your
@@ -30,6 +31,18 @@ Then invoke `/permission-explainer` (or ask your agent to run the
 `permission-explainer` skill). No account, no build, no dependencies.
 
 ## How it works
+
+Two layers — don't mix them up:
+
+- **Skill install (one-time):** the `skills/permission-explainer/` folder
+  goes to your host's skills directory (table above). It is the
+  *generator* that produces the rule.
+- **Rule text (changes behavior):** the rule block the skill prints gets
+  pasted into your host's **global rules file** — e.g. opencode uses
+  `~/.config/opencode/AGENTS.md`, Claude Code uses `~/.claude/CLAUDE.md`.
+  Exact paths for all hosts: `skills/permission-explainer/references.md`.
+
+Then the flow:
 
 1. Run the skill — or paste one prompt in any tool (below).
 2. The skill figures out which tool you are in and tells you where your global rules live.
@@ -67,25 +80,29 @@ Ask-path prints before you decide; auto-path prints past-tense after.
 
 ## Prompt (one paste works everywhere)
 
-> Figure out which AI tool I am running in right now — Claude Code, Codex, Cursor, Antigravity, opencode, Gemini CLI, or Bob — tell me which one you are and where your global rules file lives. Then open that file (if the folder is missing, create it; if the file already exists, back it up first with a timestamp so nothing is lost) and add the permission explainer rule. After pasting, show me the file path and how to verify in a new session.
+> Figure out which AI tool I am running in right now — Claude Code, Codex, Cursor, Antigravity, opencode, Gemini CLI, or Bob — tell me which one you are and where my global rules file lives. Then open that file (if the folder is missing, create it; if the file already exists, back it up first with a timestamp so nothing is lost) and add the following rule verbatim. After pasting, show me the file path and how to verify in a new session.
+>
+> ```markdown
+> # Permission explainer
+>
+> Before every Execute Command, browser action, MCP tool call, or file edit
+> that needs approval, print this first — before the approval prompt, not after:
+>
+> > 🔧 **Tool call incoming**
+> > **What:** [plain words, no jargon]
+> > **Why:** [1 line tied to my last request]
+> > **Changes:** [what changes — or "None, read-only"]
+> > **Reversible:** [Yes / No / Partially]
+> > ⚠️ **Elevated access / system files:** [Yes — describe. Omit this line if not applicable]
+> > **Pick:** Once / Always / Reject / Explain more
+>
+> If auto-approved, print after instead: `Did (auto-approved): [what happened].`
+> If I say `expert: minimal`, use 1 line. `expert: full` restores this full form.
+> If I say `expert: strict`, print a 1-line note before EVERY tool call — read, search, write, edit, command, browser, MCP, no exceptions — even when no approval prompt appears: `→ <action> — <why now>.`
+> ```
 
-The skill ships this exact prompt — `/permission-explainer` runs it for you.
-
-## Use
-
-1. Ask your agent to **run the `permission-explainer` skill** — or paste the prompt above.
-   (Slash name varies by harness and version — `/permission-explainer`
-   works where skills map to slash commands; otherwise the sentence
-    above works everywhere: Claude Code, Codex, Cursor, Antigravity,
-    opencode, Gemini CLI, Bob.)
-2. It detects your harness and prints:
-   - a copy-block rule, and
-   - your exact global rules path.
-3. Paste the block there. Open a new session, trigger a permission prompt, and check the permission explainer is printed before you decide.
-
-Say `expert: minimal` any time for the 1-line form, `expert: full` for
-the full form, `expert: strict` for a 1-line note before every tool call
-including reads.
+The rule above is embedded, so the prompt works bare — no skill install
+needed. `/permission-explainer` runs the same prompt for you.
 
 ## How it looks (real run in opencode on Termux)
 
@@ -145,6 +162,7 @@ skills/permission-explainer/
 ├── SKILL.md        # on-demand generator, never Always-On
 ├── references.md   # global paths only (verified, with sources)
 └── examples.md     # rule block + safe/destructive before-after
+
 assets/              # before/after illustrations for README
 ```
 
