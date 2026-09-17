@@ -13,11 +13,15 @@ Works with Claude Code, Codex, Cursor, Antigravity, opencode, Gemini CLI, Bob.
 ```bash
 # skills.sh (Vercel): pick your agent — recommended
 npx skills add uiyuvi/permission-explainer --skill permission-explainer --agent opencode
+# project scope is default; add -g for global (all projects)
 
 # GitHub CLI: only if you have the skills extension installed
 # (plain gh has no "skill" subcommand — you'd get "unknown command")
 gh skill install uiyuvi/permission-explainer permission-explainer
 ```
+
+Scans: Socket 0 alerts · Snyk Low Risk — full report on the skills.sh
+badge above.
 
 Manual install — copy the `skills/permission-explainer/` folder to your
 host's global skills directory:
