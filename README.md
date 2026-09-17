@@ -1,5 +1,7 @@
 # permission-explainer
 
+[![skills.sh](https://skills.sh/b/uiyuvi/permission-explainer)](https://skills.sh/uiyuvi/permission-explainer)
+
 Permission prompts need technical knowledge. This skill turns them into plain words, so anyone can decide.
 
 AI tools ask permissions — understanding them needs technical knowledge. With this skill, anyone can make an informed decision: approve or reject.
@@ -29,6 +31,13 @@ host's global skills directory:
 
 Then invoke `/permission-explainer` (or ask your agent to run the
 `permission-explainer` skill). No account, no build, no dependencies.
+
+Claude Code marketplace (alternative install):
+
+```text
+/plugin marketplace add uiyuvi/permission-explainer
+/plugin install permission-explainer@permission-explainer-marketplace
+```
 
 ## How it works
 
