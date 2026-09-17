@@ -1,9 +1,14 @@
 # assets
 
-Synthetic illustrations (SVG, no real paths/secrets). Replace with real
-screenshots before publishing if you prefer:
+- `before.svg`, `after-grep.svg`, `after-edit.svg`, `after-auto.svg` —
+  synthetic SVG mockups of raw vs explained permission prompts.
+  Labeled synthetic; kept as lightweight illustrations.
+- `opencode-install.png` — real install run in opencode on Termux:
+  model names itself, shows the global rules path, writes the rule.
+- `opencode-explainer.png` — real run: two permission explainer blocks
+  printed before config reads.
+- `opencode-rule-file.jpg` — real run: the rule as written to the
+  global `AGENTS.md`. Wording is from the live install; the current
+  text in `skills/permission-explainer/SKILL.md` is the source of truth.
 
-- `before.svg` — raw permission prompt (crop to card, hide secrets/paths)
-- `after-grep.svg` — permission explainer for search
-- `after-edit.svg` — permission explainer for delete (destructive case)
-- `after-auto.svg` — `Did (auto-approved)` explainer
+Real screenshots only: crop tight, hide usernames/paths, no secrets.

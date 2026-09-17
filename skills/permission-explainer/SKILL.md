@@ -2,7 +2,8 @@
 name: permission-explainer
 description: Explains tool permission prompts in plain words before you approve. Installs itself into this tool's global rules file.
 license: MIT
-version: 1.0.0
+metadata:
+  version: "1.0.0"
 ---
 
 Tell me which AI coding tool I am running in and where my global rules
@@ -30,3 +31,6 @@ If I say `expert: strict`, print a 1-line note before EVERY tool call — read, 
 ```
 
 Say once: "Explained does not mean safe — when in doubt, Reject."
+
+Worked examples (safe and destructive): see [examples.md](examples.md).
+Global rules paths for every host: see [references.md](references.md).

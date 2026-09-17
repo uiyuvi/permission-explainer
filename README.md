@@ -36,8 +36,11 @@ Claude Code marketplace (alternative install):
 
 ```text
 /plugin marketplace add uiyuvi/permission-explainer
-/plugin install permission-explainer@permission-explainer-marketplace
+/plugin install permission-explainer-skills@permission-explainer
 ```
+
+Note: "plugin" is Claude Code's word for an installable bundle — this
+one contains exactly one skill, unchanged.
 
 ## How it works
 

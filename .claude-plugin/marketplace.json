@@ -1,1 +1,22 @@
-{"$schema": "https://json.schemastore.org/claude-code-marketplace.json", "description": "Plain-language permission explainers for AI coding tools.", "name": "permission-explainer-marketplace", "owner": {"name": "uiyuvi"}, "plugins": [{"description": "Explains tool permission prompts in plain words before you approve. Installs itself into this tool's global rules file.", "name": "permission-explainer", "source": "./", "version": "1.0.0"}], "version": "1.0.0"}
+{
+  "name": "permission-explainer",
+  "description": "Plain-language permission explainer for tool approval prompts",
+  "owner": {
+    "name": "uiyuvi",
+    "url": "https://github.com/uiyuvi"
+  },
+  "metadata": {
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "permission-explainer-skills",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/permission-explainer"
+      ],
+      "description": "Explains tool permission prompts in plain words before you approve"
+    }
+  ]
+}
