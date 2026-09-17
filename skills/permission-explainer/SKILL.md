@@ -2,7 +2,7 @@
 name: permission-explainer
 description: Explains tool permission prompts in plain words before you approve. Installs itself into this tool's global rules file.
 license: MIT
-version: 0.4.2
+version: 1.0.0
 ---
 
 Tell me which AI coding tool I am running in and where my global rules
